@@ -43,7 +43,7 @@ if(activePage == "/service.html"){
 }
 else {
   document.body.style.backgroundColor = "";
-  document.body.style.opacity = "";
+  document.body.style.opacity = "1";
 }
 
 
