@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Project File</title>
+  <link rel="stylesheet" href="style.css" id="styleSheet">
+  <script>
+    function switchStyleSheet() {
+      var styleSheet = document.getElementById("styleSheet");
+      if (window.innerWidth < 600) {
+        styleSheet.href = "mobile.css";
+      } else {
+        styleSheet.href = "style.css";
+      }
+    }
+    switchStyleSheet();
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+
+<body>
+  <herder>
+    <nav>
+      <h2 class="hover">Cham</h2>
+      <ul>
+        <li><a href="index.html" class="active hover">Home</a></li>
+        <li><a href="project.html">Projects</a>
+        <li><a href="service.html">Services</a></li>
+      </ul>
+      <div class="input-area">
+        <input type="text" placeholder="Search Projects...">
+        <span><img src="../assets/images/search-line.svg" alt="Search Bar" class="transition hover"></span>
+      </div>
+      <div class="mood hover transition">
+        <img src="../assets/images/moon-fill.svg" alt="" id="dark">
+      </div>
+    </nav>
+  </herder>
+  <br><br><br>
+  <section id="services">
+    <div class="container">
+      <h2>Our Services</h2>
+      <p id="details">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus necessitatibus, quasi, beatae quod soluta ipsam?</p>
+      <br><br><br>
+      <section id="card">
+        <div class="row">
+        </div>
+        <div class="row">
+          <div class="column">
+            <div class="card">
+              <div class="icon-wrapper">
+                <i class="fa fa-code"></i>
+              </div>
+              <h3>Web Development</h3>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
+                consequatur necessitatibus eaque.
+              </p>
+              <button>Know More</button>
+              <button>Contact</button>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card">
+              <div class="icon-wrapper">
+                <i><img src="social-media.svg" alt="" style="height: 40px"></i>
+              </div>
+              <h3>Digital Marketing</h3>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
+                consequatur necessitatibus eaque.
+              </p>
+              <button>Know More</button>
+              <button>Contact</button>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card">
+              <div class="icon-wrapper">
+                <i class="fas fa-wrench"></i>
+              </div>
+              <h3>Video/Photo Editing</h3>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
+                consequatur necessitatibus eaque.
+              </p>
+              <button>Know More</button>
+              <button>Contact</button>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card">
+              <div class="icon-wrapper">
+                <i class="fas fa-truck-pickup"></i>
+              </div>
+              <h3>Social Media Handling</h3>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
+                consequatur necessitatibus eaque.
+              </p>
+              <button>Know More</button>
+              <button>Contact</button>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card">
+              <div class="icon-wrapper">
+                <i class="fas fa-broom"></i>
+              </div>
+              <h3>Graphics Designing</h3>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
+                consequatur necessitatibus eaque.
+              </p>
+              <button>Know More</button>
+              <button>Contact</button>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card">
+              <div class="icon-wrapper">
+                <i class="fa fa-search"></i>
+              </div>
+              <h3>SEO Optimization</h3>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
+                consequatur necessitatibus eaque.
+              </p>
+              <button>Know More</button>
+              <button>Contact</button>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card">
+              <div class="icon-wrapper">
+                <i class="fa fa-pen"></i>
+              </div>
+              <h3>Content Writing</h3>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
+                consequatur necessitatibus eaque.
+              </p>
+              <button>Know More</button>
+              <button>Contact</button>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card">
+              <div class="icon-wrapper">
+                <i class="fa fa-thumbs-up"></i>
+              </div>
+              <h3>Dedicated Supports</h3>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
+                consequatur necessitatibus eaque.
+              </p>
+              <button>Know More</button>
+              <button>Contact</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="note">
+        <p><b>Note :</b> It's not dynamically yet.</p>
+      </div>
+      <br><br><br>
+      <div class="line"></div>
+      <div class="styles">
+        <div class="style "></div><span>☆</span>
+        <div class="style "></div>
+      </div>
+    </div>
+  </section>
+
+
+  <script src="main.js"></script>
+</body>
+
+</html>

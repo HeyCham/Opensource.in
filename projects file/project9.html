@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Text Wave Animation</title>
+
+  <link rel="stylesheet" href="style.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #34495e;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .text {
+      font-size: 4.3em;
+      color: #f1f1f1;
+      font-weight: 500;
+      position: relative;
+    }
+
+    .text::after {
+      content: "";
+      position: absolute;
+      width: 60px;
+      height: 14px;
+      background-color: #e74c3c;
+      border-radius: 10px;
+      bottom: -10px;
+      left: -50px;
+      animation: trans 1.1s linear infinite;
+    }
+
+    @keyframes trans {
+      20% {
+        opacity: 1;
+      }
+
+      80% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0.1;
+        left: calc(100% + 10px);
+      }
+    }
+
+    .text span {
+      display: inline-block;
+      transition: all 1s linear;
+      animation: wave 1.1s ease-in-out infinite;
+    }
+
+
+
+    .text span:nth-child(1) {
+      animation-delay: .1s;
+    }
+
+    .text span:nth-child(2) {
+      animation-delay: .2s;
+    }
+
+    .text span:nth-child(3) {
+      animation-delay: .3s;
+    }
+
+    .text span:nth-child(4) {
+      animation-delay: .45s;
+    }
+
+    .text span:nth-child(5) {
+      animation-delay: .5s;
+    }
+
+    .text span:nth-child(6) {
+      animation-delay: .6s;
+    }
+
+    .text span:nth-child(7) {
+      animation-delay: .7s;
+    }
+
+    @keyframes wave {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(15px);
+      }
+    }
+
+    @media screen and (max-width: 668px) {
+      .text {
+        font-size: 2em;
+      }
+
+      .text::after {
+        height: 5px;
+        width: 30px;
+        left: -20px;
+        animation: trans 1s linear infinite;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="text">
+    <span>L</span>
+    <span>o</span>
+    <span>a</span>
+    <span>d</span>
+    <span>i</span>
+    <span>n</span>
+    <span>g</span>
+  </div>
+  <script src="main.js"></script>
+</body>
+
+</html>

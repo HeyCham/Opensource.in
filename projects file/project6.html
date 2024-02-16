@@ -1,0 +1,118 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Animated Search Bar</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #1b1b1b;
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      background: #292929;
+      padding: 5px;
+      width: 300px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50px;
+      box-shadow: 1px 1px 5px #292929;
+      margin: 10px;
+      position: relative;
+      transition: width 1.5s;
+    }
+
+    .input {
+      margin: 15px 50px;
+      width: 100%;
+      color: #fff;
+      border: none;
+      background: transparent;
+      outline: none;
+      transition-delay: 0.5s;
+    }
+
+    input::placeholder {
+      color: #ECF2FFE6;
+    }
+
+    .magnifier {
+      position: absolute;
+      left: 15px;
+      width: 25px;
+      text-align: center;
+      margin: 0 auto;
+      cursor: pointer;
+      color: #ffa31a;
+    }
+
+    .mic-icon {
+      position: absolute;
+      right: 10px;
+      width: 20px;
+      transition: width 0.4s;
+      transition-delay: 0.6s;
+      color: #ffa31a;
+      visibility: hidden;
+    }
+
+    /* JavaScript */
+    .active.container {
+      width: 300px;
+      display: flex;
+    }
+
+    .active .input {
+      width: 100%;
+    }
+
+    .active .mic-icon {
+      width: 30px;
+    }
+
+    .hidden {
+      visibility: visible;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <i class="fa-solid fa-magnifying-glass magnifier"> </i>
+    <input type="text" class="input" placeholder="Search..." />
+    <i class="fa-solid fa-microphone mic-icon"></i>
+  </div>
+
+  <script src="main.js"></script>
+  <script>
+    const searchContainer = document.querySelector(".container");
+    const mic = document.querySelector(".mic-icon");
+    const magnifier = document.querySelector(".magnifier");
+
+    magnifier.addEventListener("click", () => {
+      searchContainer.classList.toggle("active");
+      mic.classList.toggle("hidden");
+    });
+  </script>
+</body>
+
+</html>

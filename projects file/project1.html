@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Switch Dark and Light Mood</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      width: 100vw;
+      background: linear-gradient(to top left, #4A58F4, #CACFFF);
+      /*background: #E8E8F2;*/
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      animation: fade 1s ease;
+    }
+
+    .body-bg {
+      background: linear-gradient(to top left, #10121F, #000000);
+      animation: fade 1s ease;
+
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 17px;
+      text-align: center;
+      border: 0;
+      border-radius: 6px 6px / 3px 5px;
+      box-shadow: 0 5px 0 #FEFEFE80;
+      font-weight: bold;
+      text-transform: uppercase;
+      box-shadow: rgb(200, 208, 231) 3.2px 3.2px 8px 0px, rgb(255, 255, 255) -3.2px -3.2px 8px 0px;
+      transition: .4s ease;
+      display: none;
+    }
+
+    button:hover {
+      box-shadow: none;
+      box-shadow: rgb(200, 208, 231) 3.2px 3.2px 8px 0px inset, rgb(255, 255, 255) -3.2px -3.2px 8px 0px inset;
+      transform: translateY(3px);
+    }
+
+    .toggle-btn {
+      height: 40px;
+      width: 80px;
+      margin-top: 20px;
+      border-radius: 30px;
+      background: #42445A;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 5px;
+      filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.7));
+    }
+
+    .change-bg {
+      background: #0F78FF;
+    }
+
+    .inner-circle {
+      height: 25px;
+      width: 25px;
+      border-radius: 50%;
+      background: linear-gradient(to top left, #4A58F4, #CACFFF);
+      ;
+      text-align: center;
+      transition: transform .5s ease;
+      animation: fade .5s ease;
+      margin-left: 2px;
+    }
+
+    .transform {
+      transform: translateX(37px) rotate(360deg);
+      background: linear-gradient(to top left, #10121F, #000000);
+      height: 30px;
+      width: 30px;
+
+    }
+
+    .fade {
+      animation: fade 1s ease;
+    }
+
+    @keyframes fade {
+      0% {
+        opacity: 0;
+      }
+
+      30% {
+        opacity: 0.3;
+      }
+
+      50% {
+        opacity: 0.5;
+      }
+
+      70% {
+        opacity: 0.7;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="toggle-btn">
+      <div class="inner-circle"></div>
+    </div>
+  </div>
+  <script>
+    const toggleBtn = document.querySelector('.inner-circle');
+    const bodyBg = document.querySelector('body');
+    const toggleButton = document.querySelector('.toggle-btn');
+    const changeBg = document.querySelector('.toggle-btn');
+
+
+    function toggleBt() {
+      toggleBtn.addEventListener('click', () => {
+        toggleBtn.classList.toggle('transform');
+        changeBg.classList.toggle('change-bg');
+        bodyBg.classList.toggle('body-bg');
+        // Add fade class to bodyBg and toggleBtn
+        bodyBg.classList.add('fade');
+        toggleBtn.classList.add('fade');
+
+        // Remove fade class after the animation duration (1s)
+        setTimeout(() => {
+          bodyBg.classList.remove('fade');
+          toggleBtn.classList.remove('fade');
+        }, 1000);
+      });
+    }
+
+    toggleBt();
+  </script>
+</body>
+
+</html>

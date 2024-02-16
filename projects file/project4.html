@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rotate Card</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    html {
+      font-size: 14px;
+    }
+
+    body {
+      min-height: 100vh;
+      width: 100vw;
+      background: #212121;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+    }
+
+    .box {
+      height: 150px;
+      width: 150px;
+      background: #D4D6EC;
+      display: flex;
+      border-radius: 10px;
+      position: relative;
+      transition: .5s linear;
+    }
+
+    .box,
+    .inner-box .profile {
+      background-image: url('profile.png');
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .flip {
+      transform: rotateY(180deg);
+    }
+
+    .inner-box {
+      height: 150px;
+      width: 150px;
+      background: #212121;
+      display: flex;
+      border-radius: 10px;
+      transition: .5s linear;
+      position: absolute;
+      z-index: -1;
+      border: 1px solid #6578FF;
+      animation: opacity .6s linear;
+    }
+
+    .inner-box .profile {
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      position: absolute;
+      left: 50%;
+      top: 25%;
+      transform: translate(-50%, -50%);
+      border: 1px solid #6578FF;
+      animation: opacity 2s linear;
+      filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.4));
+    }
+
+    .user-details {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 4rem;
+      animation: opacity 2s linear;
+    }
+
+    .user-details h4 {
+      color: #E9F1FF;
+      font-size: 11px;
+      text-transform: uppercase;
+      padding-bottom: 4px;
+    }
+
+    .user-details p {
+      width: 80%;
+      font-size: 6px;
+      color: #E9F1FF;
+      text-align: center;
+    }
+
+    .btns {
+      display: flex;
+      gap: 10px;
+      margin-top: 9px;
+    }
+
+    button {
+      font-size: 6px;
+      padding: 1px 7px;
+      border: 0;
+      background: transparent;
+      border-radius: 2px;
+      color: #E9F1FF;
+      box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.7);
+      border: 1px solid #6578FF;
+    }
+
+    #hire {
+      width: 40px;
+    }
+
+    button:hover,
+    #hire:hover {
+      background: #6578FF;
+    }
+
+
+    .inner-box-flip {
+      transform: rotateY(360deg);
+
+    }
+
+    @keyframes opacity {
+      0% {
+        opacity: 0;
+      }
+
+      50% {
+        opacity: 0.5;
+      }
+
+      100% {
+        opacity: 1;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <div class="inner-box">
+      <div class="profile"></div>
+      <div class="user-details">
+        <h4>Cham</h4>
+        <p>User interface designer and Front-end Developer</p>
+        <div class="btns">
+          <button>Massage</button>
+          <button id="hire">Hire</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const btn = document.querySelectorAll('.box');
+    const innerBox = document.querySelector('.inner-box-flip');
+
+    btn.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        btn.classList.toggle('flip');
+        btn.classList.toggle('inner-box-flip');
+      })
+    })
+  </script>
+</body>
+
+</html>

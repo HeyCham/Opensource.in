@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Scroll down Indicator</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    a {
+      display: inline-block;
+    }
+
+    .first-sec {
+      min-height: 100vh;
+      width: 100vw;
+      background: #0f101c;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+
+    .scrollbar {
+      height: 40px;
+      width: 25px;
+      border-radius: 20px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: 2px solid #4d56b7;
+    }
+
+    .scrollbar::before,
+    .scrollbar::after {
+      content: '';
+      height: 7px;
+      width: 7px;
+      border: 2px solid #4d56b7;
+      display: flex;
+      position: absolute;
+      left: 6px;
+      top: -2px;
+      transform: rotate(45deg);
+      border-top: transparent;
+      border-left: transparent;
+      animation: slide-down2 1.2s ease-in-out infinite;
+    }
+
+    .scrollbar::after {
+      top: 15px;
+      animation-delay: 1.2s;
+    }
+
+    @keyframes slide-down2 {
+      0% {
+        opacity: 0;
+      }
+
+      30% {
+        opacity: 1;
+      }
+
+      60% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0;
+        top: 80%;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="first-sec">
+    <a href="#second">
+      <div class="scrollbar"></div>
+    </a>
+  </div>
+  <script src="main.js"></script>
+</body>
+
+</html>

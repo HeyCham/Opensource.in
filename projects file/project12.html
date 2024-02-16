@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animated-Radial-Menu</title>
+
+  <script defer type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script defer nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script defer src="Animated-Radial-Menu.js"></script>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700;900&display=swap");
+
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: "Roboto", sans-serif;
+      box-sizing: border-box;
+    }
+
+    .Animated-Radial-Menu {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: #2f363e;
+    }
+
+    .Animated-Radial-Menu .menu {
+      position: relative;
+      width: 280px;
+      height: 280px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .Animated-Radial-Menu .menu .toggle {
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      background: #2f363e;
+      border: 2px solid #fff;
+      border-radius: 50%;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      z-index: 100;
+      font-size: 2em;
+      transition: transform 0.5s;
+    }
+
+    .Animated-Radial-Menu .menu li {
+      position: absolute;
+      left: 0;
+      list-style: none;
+      transition: 0.3s;
+      transition-delay: calc(0.04s * var(--i));
+      transform: rotate(0deg) translateX(110px);
+      transform-origin: 140px;
+    }
+
+    .Animated-Radial-Menu .menu li a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 60px;
+      height: 60px;
+      color: var(--clr);
+      border: 2px solid var(--clr);
+      border-radius: 50%;
+      font-size: 1.5em;
+      transform: rotate(calc(-45deg * var(--i)));
+      transition: 0.3s;
+    }
+
+    .Animated-Radial-Menu .menu li a:hover {
+      background: var(--clr);
+      color: #333;
+      box-shadow: 0 0 10px var(--clr), 0 0 30px var(--clr), 0 0 50px var(--clr);
+    }
+
+    .Animated-Radial-Menu .menu.active .toggle {
+      transform: rotate(315deg);
+    }
+
+    .Animated-Radial-Menu .menu.active li {
+      transform: rotate(calc(45deg * var(--i))) translateX(0px);
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="Animated-Radial-Menu">
+
+    <ul class="menu">
+      <div class="toggle"><ion-icon name="add-outline"></ion-icon></div>
+      <li style="--i: 0; --clr: #ff2972;">
+        <a href="#">
+          <ion-icon name="beer-outline"></ion-icon>
+        </a>
+      </li>
+      <li style="--i: 1; --clr: #fee800;">
+        <a href="#">
+          <ion-icon name="home-outline"></ion-icon>
+        </a>
+      </li>
+      <li style="--i: 2; --clr: #04fc43;">
+        <a href="#">
+          <ion-icon name="person-outline"></ion-icon>
+        </a>
+      </li>
+      <li style="--i: 3; --clr: #fe00f1;">
+        <a href="#">
+          <ion-icon name="settings-outline"></ion-icon>
+        </a>
+      </li>
+      <li style="--i: 4; --clr: #00b0fe;">
+        <a href="#">
+          <ion-icon name="mail-outline"></ion-icon>
+        </a>
+      </li>
+      <li style="--i: 5; --clr: #fea600;">
+        <a href="#">
+          <ion-icon name="key-outline"></ion-icon>
+        </a>
+      </li>
+      <li style="--i: 6; --clr: #a529ff;">
+        <a href="#">
+          <ion-icon name="camera-outline"></ion-icon>
+        </a>
+      </li>
+      <li style="--i: 7; --clr: #01bdab;">
+        <a href="#">
+          <ion-icon name="image-outline"></ion-icon>
+        </a>
+      </li>
+    </ul>
+
+  </div>
+  <script>
+    let toggle = document.querySelector('.toggle')
+    let menu = document.querySelector('.menu')
+
+    toggle.onclick = () => {
+      menu.classList.toggle('active')
+    }
+  </script>
+</body>
+
+</html>

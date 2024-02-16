@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin Simple Web Page</title>
+  <link rel="stylesheet" href="style.css" id="styleSheet">
+  <script>
+    function switchStyleSheet() {
+      var styleSheet = document.getElementById("styleSheet");
+      if (window.innerWidth < 668) {
+        styleSheet.href = "mobile.css";
+      } else {
+        styleSheet.href = "style.css";
+      }
+    }
+    switchStyleSheet();
+  </script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+  <herder>
+    <nav>
+      <h2 class="hover">Cham</h2>
+      <ul>
+        <li><a href="index.html" class="hover">Home</a></li>
+        <li><a href="project.html">Projects</a>
+        <li><a href="service.html">Services</a></li>
+      </ul>
+    <div class="input-area">
+      <input type="text" placeholder="Search Projects..." id="searchInput">
+      <br><br>
+      <span><img src="../assets/images/search-line.svg" alt="Search Bar" class="transition hover"></span>
+    </div>
+    <div class="mood hover transition">
+      <img src="../assets/images/sun-fill.svg" alt="" id="dark">
+    </div>
+    </nav>
+  </herder>
+  <br><br><br>
+  <section class="home-section" id="home">
+    <p>About Admin</p>
+    <img src="../assets/images/profile.jpg" alt="Profile Pic">
+    <div class="details">
+      <p>Hey,</p>
+      <h2 class="text">I'm <span>Cham</span></h2>
+      <h4 class="text" id="text">a Frontend Developer.</h4>
+      <p id="location">📍New Delhi, India</p>
+    </div>
+    <div class="our-page">
+      <p>ϟ Benefits of following our <b>Page</b>.</p>
+      <div class="list">
+        <ul>
+          <li>HTML, CSS & Javascript Projects.</li>
+          <li>Improve Web Designing.</li>
+          <li>Source Code Free Available.</li>
+          <li>Responsive Projects.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="our-goals">
+      <h3>Goals</h3>
+      <div class="title">
+        <img src="../assets/images/code-s-slash-line.svg" alt="" class="code">
+        <span>Complete Full Stack Developer in One year.</span>
+      </div>
+      <div class="title">
+        <a href="https://www.instagram.com/0pensource"<img src="../assets/images/instagram-line.svg" alt="" class="instagram"></a>
+        <span>Reach more peoples from social handles.</span>
+      </div>
+      <div class="title">
+        <a href="#"<img src="../assets/images/bxl-telegram.svg" alt="" class="telegram"></a>
+        <span>Achieve 10k members in our Telegram.</span>
+      </div>
+      <div class="title">
+        <img src="../assets/images/user-line.svg" alt="" class="user">
+        <span>Helping more peoples through my video.</span>
+      </div>
+    </div>
+  </section>
+  <footer >
+    <img src="../assets/images/displayImg.png" alt="">
+  </footer>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script src="main.js"></script>
+</body>
+</html>

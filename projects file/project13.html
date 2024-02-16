@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Do you love me</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Sixtyfour&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .container {
+      height: 100vh;
+      background: linear-gradient(-115deg, #9A4ACD, #3A03CF);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .wrapper {
+      height: 350px;
+      width: 300px;
+      border: 2px solid white;
+      border-radius: 10px;
+      background: #FBF4FF;
+      position: relative;
+    }
+
+    .content {
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      top: 14%;
+    }
+
+    .circle {
+      height: 100px;
+      width: 100px;
+      border-radius: 50%;
+      border: 2px solid white;
+      background: linear-gradient(-115deg, #9A4ACD, #3A03CF);
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.4em;
+      color: #fff;
+      font-family: 'sixtyfour';
+      transition: .5s ease;
+      animation: bubble 2s ease-in-out infinite forwards;
+    }
+
+    .circle::after {
+      content: "";
+      height: 102px;
+      width: 102px;
+      border: 1px solid #000;
+      position: absolute;
+      top: -1.1%;
+      left: 32.4%;
+      border-radius: 50%;
+    }
+
+    .content h3 {
+      font-size: 1.4em;
+      margin-top: 2em;
+      color: #0C0C0CF2;
+    }
+
+    .content h2 {
+      font-size: 1.5em;
+    }
+
+    .btns {
+      margin-top: 20px;
+    }
+
+    button {
+      padding: 5px 30px;
+      font-size: 1.1em;
+      border: 0;
+      border-radius: 5px;
+      background: transparent;
+      border: 1px solid #9A4ACD;
+      position: relative;
+      cursor: pointer;
+      transition: all .5s ease;
+    }
+
+    button:nth-child(2) {
+      background: #E7DFFF;
+    }
+
+    #yes {
+      background: linear-gradient(-115deg, #9A4ACD, #3A03CF);
+      border: 0;
+      color: #fff;
+      padding: 7px 30px;
+
+    }
+
+    button:active {
+      transform: scale(0.87);
+      opacity: 0.8;
+    }
+
+    #refresh {
+      padding: 5px 10px 0;
+      top: 10px;
+      border: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      display: none;
+      cursor: pointer;
+    }
+
+    #refresh:hover img,
+    #refresh:active img {
+      animation: rotate .4s linear;
+    }
+
+    @keyframes rotate {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+
+    }
+
+    @keyframes bubble {
+      0% {
+        font-size: 2.4em;
+      }
+
+      25% {
+        font-size: 2.6em;
+      }
+
+      50% {
+        font-size: 2.1em;
+        color: #FFFFFFF5;
+      }
+
+      75% {
+        font-size: 2.5em;
+      }
+
+      100% {
+        font-size: 2.4em;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="wrapper">
+      <div class="content">
+        <div class="circle">?</div>
+        <h3 id="question">Do you love me?</h3>
+        <div class="btns">
+          <button id="yes">Yes</button>
+          <button id="no">No</button>
+        </div>
+        <button id="refresh"><img src="bx-refresh.svg" alt="Refresh"></button>
+      </div>
+    </div>
+  </div>
+  <script src="main.js"></script>
+  <script>
+    const wrapper = document.querySelector('.content');
+    const circle = document.querySelector('.circle');
+    const question = document.getElementById('question');
+    const yesBtn = document.getElementById('yes');
+    const noBtn = document.getElementById('no');
+    const wrapperRect = wrapper.getBoundingClientRect();
+    const noRect = noBtn.getBoundingClientRect();
+
+
+    yesBtn.addEventListener('click', () => {
+      question.innerHTML = "I Love You Too (:";
+      circle.innerHTML = "😘";
+      noBtn.style.right = '';
+      noBtn.style.bottom = '';
+      yesBtn.disabled = true;
+      noBtn.disabled = true;
+      refresh();
+    })
+
+    noBtn.addEventListener('click', () => {
+      let i = Math.floor(Math.random(1, 40) * (wrapperRect.width - noRect.width)) + 1;
+      let j = Math.floor(Math.random(1, 30) * (wrapperRect.height - noRect.height)) + 1;
+      noBtn.style.right = i + "px";
+      noBtn.style.bottom = j + "px";
+    })
+
+    function refresh() {
+      let refresh = document.getElementById('refresh');
+      refresh.style.display = 'block';
+      refresh.addEventListener('click', () => {
+        refresh.style.display = "none";
+        yesBtn.disabled = false;
+        noBtn.disabled = false;
+        question.innerHTML = "Do you love me?";
+        circle.innerHTML = "?";
+      })
+    }
+  </script>
+</body>
+
+</html>
