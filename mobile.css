@@ -25,10 +25,6 @@ body {
   background: #FBFDFF;
 }
 
-body {
-  opacity: 0.4;
-  transition: opacity .5s ease-in-out;
-}
 
 .toggle.bg {
   background: #171717;
