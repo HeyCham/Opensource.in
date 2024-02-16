@@ -27,12 +27,14 @@ const activePage = window.location.pathname;
 const navLinks = document.querySelectorAll('nav ul li a');
 const inputArea = document.querySelector('.input-area'); 
 
+/*
 if(activePage == "/project.html" ){
   inputArea.style.display = 'flex';
 }
 else {
   inputArea.style.display = 'none';
 }
+*/
 
 if(activePage == "/service.html"){
   document.body.style.backgroundColor = "#fff";
