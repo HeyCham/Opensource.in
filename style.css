@@ -28,7 +28,6 @@
   }
 
   body {
-    opacity: 0.3;
     transition: opacity .5s ease-in-out;
     animation: fade .5s ease-in-out;
   }
@@ -71,6 +70,7 @@
     margin-right: 0 auto;
     color: #000;
     padding-right: 1em;
+    margin-left: 1em;
     transition: .3s ease-in-out;
   }
 
@@ -366,7 +366,6 @@
   #projects,
   #services {
     padding: 3em;
-    margin-left: 1em;
     position: relative;
     top: 15%;
   }

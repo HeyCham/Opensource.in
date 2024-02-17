@@ -8,14 +8,14 @@ darkToggleBtn.addEventListener('click', () => {
     // Switch to dark mode
     body.style.background = "#121212";
     body.style.color = "#fff";
-    textColor.forEach((text)=>{
+    textColor.forEach((text) => {
       text.style.color = "#fff";
     });
     isDarkMode = true;
   } else {
     body.style.background = ""; // Revert to default background
     body.style.color = ""; // Revert to default text color
-    textColor.forEach((text)=>{
+    textColor.forEach((text) => {
       text.style.color = ""; // Revert to default text color for each text element
     });
     isDarkMode = false;
@@ -39,12 +39,12 @@ else {
 }
 */
 
-if(activePage == "/service.html"){
+if (activePage == "/service.html") {
   document.body.style.backgroundColor = "#fff";
   document.body.style.opacity = "0.3";
-  setTimeout(()=>{
+  setTimeout(() => {
     document.body.style.opacity = "1";
-  },100)
+  }, 100)
 }
 else {
   document.body.style.backgroundColor = "";
@@ -52,7 +52,7 @@ else {
 }
 
 
-/*
+
 navLinks.forEach((link)=>{
   if(link.href.includes(`${activePage}`)){
     link.classList.add('active');
@@ -61,36 +61,21 @@ navLinks.forEach((link)=>{
     link.classList.remove('active');
   }
 });
-*/
 
-//const navLinks = document.querySelectorAll('.nav-link');
-
-document.addEventListener("DOMContentLoaded", function() {
-    const links = document.querySelectorAll("ul li a");
-
-    links.forEach(link => {
-      link.addEventListener("click", function(event) {
-        event.preventDefault(); // Prevent the default link behavior
-        links.forEach(link => link.classList.remove("active"));
-        this.classList.add("active");
-      });
-    });
-  
-});
 
 
 const noDataImg = document.getElementById('img');
 const heading = document.getElementById('heading');
-const text = document.getElementById('text'); 
+const text = document.getElementById('text');
 const projectsContainer = document.querySelector('.projects');
 
 document.getElementById("searchInput").addEventListener("keyup", function() {
   var input, filter, projects, source, title, description, i, txtValue;
-  
+
   input = document.getElementById("searchInput");
   filter = input.value.toUpperCase();
   projects = document.getElementsByClassName("source");
-  
+
   let anyMatch = false; // Flag to track if any project matches the search criteria
 
   for (i = 0; i < projects.length; i++) {
@@ -105,7 +90,7 @@ document.getElementById("searchInput").addEventListener("keyup", function() {
       source.style.display = "none";
     }
   }
-  
+
   // Show or hide noDataImg based on the flag
   if (!anyMatch) {
     noDataImg.style.display = "block";
@@ -123,5 +108,5 @@ document.getElementById("searchInput").addEventListener("keyup", function() {
 
 window.onload = function() {
   document.body.style.opacity = "1";
-  
+
 };
