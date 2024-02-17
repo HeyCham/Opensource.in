@@ -818,3 +818,8 @@ footer img {
   background: url('./assets/images/projects-images/projects16.jpg') center no-repeat;
   background-size: cover;
 }
+
+.projects .source:nth-child(17) .box {
+  background: url('./assets/images/projects-images/projects17.jpg') center no-repeat;
+  background-size: cover;
+}
