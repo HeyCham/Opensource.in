@@ -25,7 +25,10 @@ darkToggleBtn.addEventListener('click', () => {
 
 const activePage = window.location.pathname;
 const navLinks = document.querySelectorAll('nav ul li a');
-const inputArea = document.querySelector('.input-area'); 
+
+
+
+//const inputArea = document.querySelector('.input-area'); 
 
 /*
 if(activePage == "/project.html" ){

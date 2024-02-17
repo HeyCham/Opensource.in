@@ -312,6 +312,7 @@
   .home-section .our-goals h3 {
     font-size: 4.2em;
     margin: 1em 4em .5em 0;
+    font-family: 'Nunito','Poppins';
   }
 
   .home-section .title img {
@@ -633,7 +634,9 @@
   .card:hover {
     transform: translateY(-10px);
   }
-
+  .icon-wrapper #social-media{
+    height: 40px;
+  }
   .card button {
     position: relative;
     font-size: 19px;

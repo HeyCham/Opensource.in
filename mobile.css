@@ -270,6 +270,18 @@ nav .mood {
   background-image: linear-gradient(120deg, #A7F7FF 0%, #469DFF 100%);
 }
 
+.home-section .title .instagram,.telegram,.user,.code{
+  transition: all .4s ease-in-out;
+}
+.home-section .title .instagram:hover,
+.telegram:hover,
+.user:hover,
+.code:hover
+{
+  transform: scale(0.95);
+  opacity: 0.8;
+}
+
 .home-section .details #text {
   font-family: 'Comfortaa';
   margin-left: -1px;
@@ -302,6 +314,7 @@ nav .mood {
   font-size: 1.4em;
   color: #3E3E3E;
   margin-left: -2px;
+  font-family: 'Nunito','Poppins',sans-serif;
 }
 
 footer {
@@ -312,11 +325,6 @@ footer img {
   height: 300px;
   filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.1));
 }
-
-
-
-
-
 
 #projects,
 #services {
@@ -594,7 +602,9 @@ footer img {
 .card:hover {
   transform: translateY(-10px);
 }
-
+.icon-wrapper #social-media{
+  height: 22px;
+}
 .card button {
   position: relative;
   font-size: 15px;
