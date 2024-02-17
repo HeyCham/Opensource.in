@@ -823,3 +823,7 @@ footer img {
   background: url('./assets/images/projects-images/projects17.jpg') center no-repeat;
   background-size: cover;
 }
+.projects .source:nth-child(18) .box {
+  background: url('./assets/images/projects-images/projects18.jpg') center no-repeat;
+  background-size: cover;
+}
