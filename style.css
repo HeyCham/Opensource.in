@@ -634,9 +634,6 @@
   .card:hover {
     transform: translateY(-10px);
   }
-  .icon-wrapper img{
-    height: 30px;
-  }
   .card button {
     position: relative;
     font-size: 19px;
