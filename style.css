@@ -634,8 +634,8 @@
   .card:hover {
     transform: translateY(-10px);
   }
-  .icon-wrapper #social-media{
-    height: 40px;
+  .icon-wrapper img{
+    height: 30px;
   }
   .card button {
     position: relative;
