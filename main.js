@@ -52,7 +52,7 @@ else {
 }
 
 
-
+/*
 navLinks.forEach((link)=>{
   if(link.href.includes(`${activePage}`)){
     link.classList.add('active');
@@ -61,7 +61,22 @@ navLinks.forEach((link)=>{
     link.classList.remove('active');
   }
 });
+*/
 
+//const navLinks = document.querySelectorAll('.nav-link');
+
+document.addEventListener("DOMContentLoaded", function() {
+    const links = document.querySelectorAll("ul li a");
+
+    links.forEach(link => {
+      link.addEventListener("click", function(event) {
+        event.preventDefault(); // Prevent the default link behavior
+        links.forEach(link => link.classList.remove("active"));
+        this.classList.add("active");
+      });
+    });
+  
+});
 
 
 const noDataImg = document.getElementById('img');
