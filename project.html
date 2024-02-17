@@ -22,6 +22,10 @@
 </head>
 
 <body>
+  <div class="preloader">
+    <div class="lds-ripple"><div></div><div></div></div>    
+  </div>
+  
   <herder>
     <nav>
       <h2 class="hover">Cham</h2>
@@ -214,9 +218,11 @@
       </div>
   </section>
   <script src="main.js"></script>
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
-    AOS.init();
+    const preloader = document.querySelector('.preloader');
+    window.addEventListener('load',()=>{
+      preloader.style.display = 'none';
+    })
   </script>
 </body>
 

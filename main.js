@@ -53,8 +53,8 @@ else {
 
 
 
-navLinks.forEach((link)=>{
-  if(link.href.includes(`${activePage}`)){
+navLinks.forEach((link) => {
+  if (link.href.includes(`${activePage}`)) {
     link.classList.add('active');
   }
   else {
@@ -108,5 +108,4 @@ document.getElementById("searchInput").addEventListener("keyup", function() {
 
 window.onload = function() {
   document.body.style.opacity = "1";
-
 };
