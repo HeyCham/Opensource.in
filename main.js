@@ -68,6 +68,7 @@ const noDataImg = document.getElementById('img');
 const heading = document.getElementById('heading');
 const text = document.getElementById('text');
 const projectsContainer = document.querySelector('.projects');
+const loadBtns = document.getElementById('load-btn'); 
 
 document.getElementById("searchInput").addEventListener("keyup", function() {
   var input, filter, projects, source, title, description, i, txtValue;
@@ -76,7 +77,7 @@ document.getElementById("searchInput").addEventListener("keyup", function() {
   filter = input.value.toUpperCase();
   projects = document.getElementsByClassName("source");
 
-  let anyMatch = false; // Flag to track if any project matches the search criteria
+  let anyMatch = false;
 
   for (i = 0; i < projects.length; i++) {
     source = projects[i];
@@ -85,27 +86,60 @@ document.getElementById("searchInput").addEventListener("keyup", function() {
     txtValue = description.textContent || description.innerText;
     if (txtValue.toUpperCase().indexOf(filter) > -1) {
       source.style.display = "";
-      anyMatch = true; // Set flag to true if any project matches
+      anyMatch = true; 
     } else {
       source.style.display = "none";
     }
   }
 
-  // Show or hide noDataImg based on the flag
   if (!anyMatch) {
     noDataImg.style.display = "block";
     heading.style.display = "none";
     text.style.display = "none";
-    projectsContainer.style.display = "none"; // Hide projects container if no data
+    loadBtns.style.display = "none";
+    projectsContainer.style.display = "none";
   } else {
     noDataImg.style.display = "none";
     heading.style.display = "block";
     text.style.display = "block";
-    projectsContainer.style.display = "flex"; // Show projects container if there's data
+    loadBtns.style.display = "flex";
+    projectsContainer.style.display = "flex"; 
   }
 });
+
 
 
 window.onload = function() {
   document.body.style.opacity = "1";
 };
+
+
+
+// Show limited items
+
+const loadBtn = document.getElementById('load-btn');
+const projectItems = document.getElementsByClassName('source');
+
+let currentItems = 10;
+
+for (let i = currentItems; i < projectItems.length; i++) {
+  projectItems[i].style.display = 'none';
+}
+
+loadBtn.addEventListener('click', showNextItems);
+
+function showNextItems() {
+  const nextItemsIndex = currentItems + 10;
+
+  for (let i = currentItems; i < nextItemsIndex && i < projectItems.length; i++) {
+    projectItems[i].style.display = 'inline-block';
+  }
+
+  currentItems = nextItemsIndex;
+
+  if (currentItems >= projectItems.length) {
+    loadBtn.style.display = 'none';
+  }
+}
+
+
