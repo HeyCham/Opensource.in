@@ -26,10 +26,6 @@
     max-width: 1480px;
     height: 100vh;
     background: #FBFDFF;
-  }
-
-
-  body {
     transition: opacity .5s ease-in-out;
     animation: fade .5s ease-in-out;
   }
@@ -702,13 +698,13 @@
     color: #1f194c;
   }
 
-  #card p {
+  .card p {
     color: #575a7b;
     font-size: 20px;
     line-height: 1.6;
     letter-spacing: 0.03em;
     width: 100%;
-    margin: 20px;
+    text-align: center;
   }
 
   .icon-wrapper {
@@ -907,4 +903,57 @@
     background: url('./assets/images/projects-images/projects19.jpg') center no-repeat;
     background-size: cover;
   }
+  .projects .source:nth-child(20) .box {
+    background: url('./assets/images/projects-images/projects20.jpg') center no-repeat;
+    background-size: cover;
+  }
+  .projects .source:nth-child(21) .box {
+    background: url('./assets/images/projects-images/projects21.jpg') center no-repeat;
+    background-size: cover;
+  }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.skeleton {
+    position: relative;
+}
+.skeleton::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background: linear-gradient(90deg, #eee, #f9f9f9, #eee);
+    background-size: 200%;
+    animation: skeleton 1s infinite reverse;
+}
+@keyframes skeleton {
+    0% {
+        background-position: -100% 0;
+    }
+    100% {
+        background-position: 100% 0;
+    }
+}
+
+
