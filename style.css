@@ -572,6 +572,7 @@
 
   #services .container h2 {
     font-size: 4.6em;
+    width: 150%;
     text-align: center;
   }
 
