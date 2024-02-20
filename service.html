@@ -189,7 +189,10 @@
     const preloader = document.querySelector('.loader-code');
 
     window.addEventListener('load', () => {
-      preloader.style.display = 'none';
+      //preloader.style.display = 'none';
+      setTimeout(() =>{
+        preloader.style.display = "none";
+      },500);
     });
   </script>
 </body>

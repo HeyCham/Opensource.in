@@ -99,10 +99,13 @@
     const footer = document.querySelector('footer');
     
     window.addEventListener('load',()=>{
-      preloader.style.display = 'none';
+      //preloader.style.display = 'none';
       header.style.display = "block";
       homeSection.style.display = "block";
       footer.style.display = "block";
+      setTimeout(()=>{
+        preloader.style.display = 'none';
+      },1000);
     })
   </script>
 </body>

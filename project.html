@@ -26,6 +26,9 @@
     <div class="lds-ripple"><div></div><div></div></div>    
   </div>
   -->
+  <div class="loader-code">
+    <span class="loader"></span>
+  </div>
   <herder>
     <nav>
       <h2 class="hover">Cham</h2>
@@ -280,9 +283,12 @@
   </section>
   <script src="main.js"></script>
   <script>
-    const preloader = document.querySelector('.preloader');
+    const preloader = document.querySelector('.loader-code');
     window.addEventListener('load',()=>{
-      preloader.style.display = 'none';
+      //preloader.style.display = 'none';
+      setTimeout(() =>{
+        preloader.style.display = 'none';  
+      },1000);
     })
   </script>
 </body>
