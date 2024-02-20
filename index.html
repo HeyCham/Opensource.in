@@ -28,7 +28,7 @@
   <div class="loader-code">
     <span class="loader"></span>
   </div>
-  <herder>
+  <herder id="header">
     <nav>
       <h2 class="hover">Cham</h2>
       <ul class="nav-links">
@@ -94,8 +94,13 @@
   <script src="main.js"></script>
   <script>
     const preloader = document.querySelector('.loader-code');
+    const header = document.getElementById('header');
+    const homeSection = document.querySelector('.home-section');
+    
     window.addEventListener('load',()=>{
       preloader.style.display = 'none';
+      header.style.display = "block";
+      homeSection.style.display = "block";
     })
   </script>
 </body>

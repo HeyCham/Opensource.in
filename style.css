@@ -50,7 +50,9 @@
       width: 1480px;
     }
   }
-
+  #header{
+    display: none;
+  }
   nav {
     width: 100%;
     background: #fff;
@@ -221,6 +223,7 @@
     top: 15%;
     padding: 2em;
     margin-left: 2em;
+    display: none;
   }
 
   .home-section .details,
@@ -356,6 +359,7 @@
 
   footer {
     margin: 25em 18em;
+    display: none;
   }
 
   footer img {
