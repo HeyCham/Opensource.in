@@ -359,6 +359,7 @@
 
   footer img {
     height: 700px;
+    pointer-events: none;
   }
 
   .preloader {
