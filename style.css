@@ -241,6 +241,7 @@
     height: 500px;
     border-radius: 20px 60px;
     margin-left: 15px;
+    pointer-events: none;
   }
 
   .home-section .details {
