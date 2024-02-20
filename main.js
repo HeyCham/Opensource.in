@@ -1,6 +1,12 @@
+/*
 const darkToggleBtn = document.getElementById('dark');
 const textColor = document.querySelectorAll('.text');
 const body = document.querySelector('body');
+const navBar = document.querySelector('nav');
+const ourGoalsH3 = document.querySelector('.our-goals h3'); 
+const colors = document.querySelectorAll('.color');
+
+
 let isDarkMode = false;
 
 darkToggleBtn.addEventListener('click', () => {
@@ -8,20 +14,25 @@ darkToggleBtn.addEventListener('click', () => {
     // Switch to dark mode
     body.style.background = "#121212";
     body.style.color = "#fff";
+    ourGoalsH3.style.color = "#fff";
+    navBar.classList.add('nav-toggle');
     textColor.forEach((text) => {
       text.style.color = "#fff";
     });
-    isDarkMode = true;
+        isDarkMode = true;
   } else {
-    body.style.background = ""; // Revert to default background
-    body.style.color = ""; // Revert to default text color
+    body.style.background = "";
+    body.style.color = "";
+    ourGoalsH3.style.color = "";
+    navBar.classList.remove('nav-toggle');
     textColor.forEach((text) => {
-      text.style.color = ""; // Revert to default text color for each text element
+      text.style.color = ""; 
     });
     isDarkMode = false;
   }
 });
 
+*/
 
 const activePage = window.location.pathname;
 const navLinks = document.querySelectorAll('nav ul li a');

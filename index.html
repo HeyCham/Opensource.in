@@ -30,26 +30,26 @@
   </div>
   <herder id="header">
     <nav>
-      <h2 class="hover">Cham</h2>
+      <h2 class="hover ">Cham</h2>
       <ul class="nav-links">
-        <li><a href="index.html" class="hover active">Home</a></li>
-        <li><a href="project.html">Projects</a>
-        <li><a href="service.html">Services</a></li>
+        <li><a href="index.html" class="hover active ">Home</a></li>
+        <li><a href="project.html" class="color">Projects</a>
+        <li><a href="service.html" class="color">Services</a></li>
       </ul>
     <!--<div class="input-area">
       <input type="text" placeholder="Search Projects..." id="searchInput">
       <br><br>
       <span><img src="search-line.svg" alt="Search Bar" class="transition hover"></span>
     </div> -->
-    <div class="mood hover transition">
-      <img src="sun-fill.svg" alt="" id="dark">
+    <div class="mood hover transition ">
+      <img src="sun-fill.svg" alt="" id="dark" style="height: 16px;">
     </div>
     </nav>
   </herder>
   <br><br><br>
   <section class="home-section" id="home">
     <p >About Admin</p>
-    <img src="profile.jpg" alt="Profile Pic" >
+    <img src="profile.jpg" alt="Profile Pic">
     <div class="details">
       <p >Hey,</p>
       <h2 class="text ">I'm <span>Cham</span></h2>
@@ -96,11 +96,13 @@
     const preloader = document.querySelector('.loader-code');
     const header = document.getElementById('header');
     const homeSection = document.querySelector('.home-section');
+    const footer = document.querySelector('footer');
     
     window.addEventListener('load',()=>{
       preloader.style.display = 'none';
       header.style.display = "block";
       homeSection.style.display = "block";
+      footer.style.display = "block";
     })
   </script>
 </body>

@@ -60,7 +60,10 @@ nav {
   border-radius: 0 0 5px 5px;
   z-index: 6666;
 }
-
+.nav-toggle{
+  background: #101010;
+  border-bottom: .1px solid lavender;
+}
 nav h2 {
   font-size: 1.7em;
   padding-right: 1em;
@@ -136,7 +139,6 @@ nav .input-area input::placeholder {
 
 
 nav .mood img {
-  height: 17px;
   margin: 5px 0 0 -18px;
 }
 
