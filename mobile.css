@@ -445,9 +445,11 @@ footer img {
 #projects .source {
   height: 370px;
   width: 300px;
-  border: 2px solid;
+  border: 1px solid #2B7EFF;
   border-radius: 30px;
-  box-shadow: inset 5px 5px 4px rgba(255, 255, 255, 0.8), 2px 2px 4px rgba(0, 0, 0, 0.5);
+  background: #F6F9FF;
+
+  /*box-shadow: inset 5px 5px 4px rgba(255, 255, 255, 0.8), 2px 2px 4px rgba(0, 0, 0, 0.5);*/
 }
 
 #projects .source .box {
