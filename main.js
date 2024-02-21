@@ -80,7 +80,9 @@ const windowPathName = window.location.pathname;
 
 allPages.forEach(page => {
   const pagePathName = new URL(page.href).pathname;
-  
+  page.addEventListener('click',(e) =>{
+    page.classList.remove('active');
+  })
   if ((windowPathName === pagePathName) || (windowPathName === './index.html' && pagePathName === './')) {
     page.classList.add('active');
   }
