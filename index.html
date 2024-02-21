@@ -6,14 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>https://www.Opensource.com/heyCham/home/</title>
   <link rel="icon" href="favicon.png" type="image/png" >
-  <link rel="stylesheet" href="style.css" id="styleSheet">
+  <link rel="stylesheet" href="./style_hidden.css" id="styleSheet">
   <script>
     function switchStyleSheet() {
       var styleSheet = document.getElementById("styleSheet");
       if (window.innerWidth < 668) {
-        styleSheet.href = "mobile.css";
+        styleSheet.href = "./mobile_hidden.css";
       } else {
-        styleSheet.href = "style.css";
+        styleSheet.href = "./style_hidden.css";
       }
     }
     switchStyleSheet();
