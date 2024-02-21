@@ -73,7 +73,7 @@ navLinks.forEach((link) => {
   }
 });
 */
-
+/*
 const allPages = document.querySelectorAll('.nav-links li a');
 
 const windowPathName = window.location.pathname;
@@ -87,7 +87,7 @@ allPages.forEach(page => {
     page.classList.add('active');
   }
 });
-
+*/
 
 
 
