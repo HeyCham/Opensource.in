@@ -35,6 +35,7 @@ darkToggleBtn.addEventListener('click', () => {
 */
 
 const activePage = window.location.pathname;
+console.log(activePage)
 const navLinks = document.querySelectorAll('nav ul li a');
 
 
