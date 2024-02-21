@@ -974,6 +974,10 @@
     background: url('./assets/images/projects-images/projects21.jpg') center no-repeat;
     background-size: cover;
   }
+  .projects .source:nth-child(22) .box {
+    background: url('./assets/images/projects-images/projects22.jpg') center no-repeat;
+    background-size: cover;
+  }
 }
 
 
