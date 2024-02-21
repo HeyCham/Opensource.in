@@ -35,7 +35,6 @@ darkToggleBtn.addEventListener('click', () => {
 */
 
 const activePage = window.location.pathname;
-console.log(activePage)
 const navLinks = document.querySelectorAll('nav ul li a');
 
 
@@ -63,7 +62,7 @@ else {
   document.body.style.opacity = "1";
 }
 
-
+/*
 
 navLinks.forEach((link) => {
   if (link.href.includes(`${activePage}`)) {
@@ -73,6 +72,21 @@ navLinks.forEach((link) => {
     link.classList.remove('active');
   }
 });
+*/
+
+const allPages = document.querySelectorAll('.nav-links li a');
+
+const windowPathName = window.location.pathname;
+
+allPages.forEach(page => {
+  const pagePathName = new URL(page.href).pathname;
+  
+  if ((windowPathName === pagePathName) || (windowPathName === './index.html' && pagePathName === './')) {
+    page.classList.add('active');
+  }
+});
+
+
 
 
 
