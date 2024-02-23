@@ -885,6 +885,14 @@
     background: url('./assets/images/projects-images/projects23.jpg') center no-repeat;
     background-size: cover;
   }
+  .projects .source:nth-child(24) .box {
+    background: url('./assets/images/projects-images/projects24.jpg') center no-repeat;
+    background-size: cover;
+  }
+  .projects .source:nth-child(25) .box {
+    background: url('./assets/images/projects-images/projects25.jpg') center no-repeat;
+    background-size: cover;
+  }
 }
 
 
