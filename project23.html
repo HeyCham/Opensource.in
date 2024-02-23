@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Progress Bar</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: hsl(223, 17%, 24%);
+      display: grid;
+      place-items: center;
+    }
+
+    .wrapper {
+      position: relative;
+    }
+
+    label {
+      position: absolute;
+      top: -30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      font-size: 1.5em;
+      color: transparent;
+      background: linear-gradient(115deg, #ffc371, #ff5f6d);
+      background-clip: text;
+      -webkit-background-clip: text;
+      font-weight: 900;
+      letter-spacing: 2px;
+    }
+
+    .outer-cercle {
+      width: 200px;
+      aspect-ratio: 1;
+      box-shadow:
+        7px 7px 10px hsl(223, 17%, 19%),
+        -7px -7px 10px hsl(223, 17%, 29%);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+    }
+
+    .inner-cercle {
+      width: 140px;
+      aspect-ratio: 1;
+      box-shadow:
+        inset 7px 7px 10px hsl(223, 17%, 19%),
+        inset -7px -7px 10px hsl(223, 17%, 29%);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: white;
+      font-weight: bold;
+      font-size: 2em;
+    }
+
+    .svg {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    .svg-circle {
+      fill: none;
+      stroke: url(#svgColor);
+      stroke-width: 30px;
+      stroke-dasharray: 535;
+      stroke-dashoffset: 535;
+      stroke-linecap: round;
+      animation: anime 2s linear forwards;
+    }
+
+    @keyframes anime {
+      100% {
+        stroke-dashoffset: 107;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <label for="">HTML</label>
+    <div class="outer-cercle">
+      <div class="inner-cercle">
+        <span id="number">80%</span>
+      </div>
+    </div>
+    <svg class="svg" width="200" height="200" xmlns="htmp://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="svgColor">
+          <stop offset="0%" stop-color="#ff5f6d"></stop>
+          <stop offset="100%" stop-color="#ffc371"></stop>
+        </linearGradient>
+      </defs>
+      <circle class="svg-circle" cx="100" cy="100" r="85"></circle>
+    </svg>
+
+
+
+  </div>
+
+  <script src="main.js"></script>
+  <script>
+    let countNumber = document.querySelector("#number");
+
+    let number = 0;
+
+    setInterval(() => {
+      if (number == 80) {
+        clearInterval
+      } else {
+        number += 1;
+        countNumber.innerHTML = `${number}%`
+      }
+    }, (2000 / 80))
+  </script>
+</body>
+
+</html>

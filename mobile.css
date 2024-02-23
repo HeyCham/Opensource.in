@@ -1,6 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Lexend:wght@100..900&family=Manrope:wght@200..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
+/* Default styles */
+#styleSheet {
+  href: "./style_hidden.css";
+}
+
+/* Mobile styles for window width less than 668px */
+@media screen and (max-width: 668px) {
+  #styleSheet {
+    href: "./mobile_hidden.css";
+  }
+}
+
 
 
 * {
@@ -176,7 +188,9 @@ nav .input-area span:hover {
 nav .mood {
   margin-left: 30px;
 }
-
+nav .mood img{
+  height: 15px;
+}
 .hover:hover {
   transform: scale(0.9);
   opacity: 0.8;
@@ -337,74 +351,6 @@ footer img {
   filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.1));
 }
 
-/*
-.preloader {
-  height: 100vh;
-  width: 100%;
-  background: #333;
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 9900;
-}
-
-.lds-ripple {
-  display: inline-block;
-  position: relative;
-  width: 80px;
-  height: 80px;
-}
-
-.lds-ripple div {
-  position: absolute;
-  border: 4px solid #fff;
-  opacity: 1;
-  border-radius: 50%;
-  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
-}
-
-.lds-ripple div:nth-child(2) {
-  animation-delay: -0.5s;
-}
-
-@keyframes lds-ripple {
-  0% {
-    top: 36px;
-    left: 36px;
-    width: 0;
-    height: 0;
-    opacity: 0;
-  }
-
-  4.9% {
-    top: 36px;
-    left: 36px;
-    width: 0;
-    height: 0;
-    opacity: 0;
-  }
-
-  5% {
-    top: 36px;
-    left: 36px;
-    width: 0;
-    height: 0;
-    opacity: 1;
-  }
-
-  100% {
-    top: 0px;
-    left: 0px;
-    width: 72px;
-    height: 72px;
-    opacity: 0;
-  }
-}
-
-*/
 
 .loader-code {
   height: 100vh;
@@ -935,6 +881,10 @@ footer img {
   background: url('./assets/images/projects-images/projects22.jpg') center no-repeat;
   background-size: cover;
 }
+.projects .source:nth-child(23) .box {
+  background: url('./assets/images/projects-images/projects23.jpg') center no-repeat;
+  background-size: cover;
+}
 
 
 
@@ -970,3 +920,6 @@ footer img {
     background-position: 100% 0;
   }
 }
+
+
+

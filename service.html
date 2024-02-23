@@ -28,10 +28,11 @@
     </div>
   </div>
 -->
+
   <div class="loader-code">
     <span class="loader"></span>
   </div>
-  <herder>
+  <header style="display: none">
     <nav>
       <h2 class="hover">Cham</h2>
       <ul class="nav-links">
@@ -44,12 +45,12 @@
         <span><img src="../assets/images/search-line.svg" alt="Search Bar" class="transition hover"></span>
       </div> -->
       <div class="mood hover transition">
-        <img src="sun-fill.svg" alt="" id="dark" style="height: 17px;">
+        <img src="sun-fill.svg" alt="" id="dark">
       </div>
     </nav>
-  </herder>
+  </header>
   <br><br><br>
-  <section id="services">
+  <section id="services" style="display: none">
     <div class="container">
       <h2>Our Services</h2>
       <p id="details">Welcome! We're provie these all services. If you want to know more about it then contact us. But it is not dynamically yet. We're working on it. Stay connected!</p>
@@ -187,12 +188,15 @@
   <script src="main.js"></script>
   <script>
     const preloader = document.querySelector('.loader-code');
-
+    const header = document.querySelector('header');
+    const services = document.querySelector('#services');
     window.addEventListener('load', () => {
       //preloader.style.display = 'none';
       setTimeout(() =>{
         preloader.style.display = "none";
       },500);
+      header.style.display = 'block';
+      services.style.display = 'block';
     });
   </script>
 </body>
