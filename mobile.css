@@ -894,7 +894,14 @@ footer img {
   background: url('./assets/images/projects-images/projects25.jpg') center no-repeat;
   background-size: cover;
 }
-
+.projects .source:nth-child(26) .box {
+  background: url('./assets/images/projects-images/projects26.jpg') center no-repeat;
+  background-size: cover;
+}
+.projects .source:nth-child(27) .box {
+  background: url('./assets/images/projects-images/projects27.jpg') center no-repeat;
+  background-size: cover;
+}
 
 
 
