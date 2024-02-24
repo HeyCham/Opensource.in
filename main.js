@@ -180,3 +180,31 @@ window.addEventListener('load', function() {
 })
 
 
+
+
+let pageIndex = 1;
+
+document.getElementById('load-btn').addEventListener('click', function() {
+  // Your logic to load more items goes here
+
+  // Increment the page index
+  pageIndex++;
+
+  // Update the browser's history
+  const state = { page: pageIndex };
+  const title = `Page ${pageIndex}`;
+  const url = `?page=${pageIndex}`;
+  history.pushState(state, title, url);
+});
+
+window.addEventListener('popstate', function(event) {
+  // Handle the back button
+  if (event.state) {
+    // Load the previous page based on the state
+    pageIndex = event.state.page;
+    // Implement logic to go back to the previous page
+    // Fetch and display items for the pageIndex
+  }
+});
+
+
