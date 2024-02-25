@@ -29,7 +29,7 @@
   <div class="loader-code">
     <span class="loader"></span>
   </div>
-  <herder>
+  <header style="display: none">
     <nav>
       <h2 class="hover">Cham</h2>
       <ul class="nav-links">
@@ -45,10 +45,10 @@
         <img src="sun-fill.svg" alt="" id="dark" >
       </div>
     </nav>
-  </herder>
+  </header>
   <br><br><br>
 
-  <section id="projects">
+  <section id="projects" style="display: none">
     <h2 id="heading" >Web Project Source Codes</h2>
     <p id="text">Welcome! All projects are here. You can preview and download. If you're facing any problem direct dm me on Insta.</p>
     <img src="z4c7jIndmE.gif" alt="" id="img">
@@ -344,11 +344,15 @@
   <script src="main.js"></script>
   <script>
     const preloader = document.querySelector('.loader-code');
+    const header = document.querySelector('header');
+    const projects = document.getElementById('projects');
     window.addEventListener('load',()=>{
       //preloader.style.display = 'none';
       setTimeout(() =>{
         preloader.style.display = 'none';  
       },1000);
+      header.style.display = 'block';
+      projects.style.display = 'block';
     })
   </script>
 </body>

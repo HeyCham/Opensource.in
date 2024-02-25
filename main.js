@@ -206,5 +206,3 @@ window.addEventListener('popstate', function(event) {
     // Fetch and display items for the pageIndex
   }
 });
-
-
