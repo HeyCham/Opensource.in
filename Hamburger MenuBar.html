@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Hamburger Menu Bar</title>
+
+  <style>
+    body {
+      height: 100vh;
+      background: #f5f5f5;
+      background: #425E7B;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      -webkit-tap-highlight-color: transparent;
+      transition: .5s ease-in-out;
+    }
+
+    .hamburger {
+      height: 100px;
+      width: 100px;
+      background: #1A2838;
+      backdrop-filter: blur(20px);
+      border-radius: 10px;
+      box-shadow: 0 0px 10px rgba(0, 0, 0, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      transition: .5s ease-in-out;
+      cursor: pointer;
+    }
+
+    span {
+      position: absolute;
+      width: 50px;
+      height: 5px;
+      border-radius: 30px;
+      background: linear-gradient(to bottom left, #1C82FF, #1CD7FF);
+      transition: all .5s ease-in-out;
+    }
+
+    span:nth-child(1) {
+      transform: translateY(-15px);
+    }
+
+    span:nth-child(2) {
+      width: 40px;
+      right: 25px;
+    }
+
+    span:nth-child(3) {
+      transform: translateY(15px);
+      width: 27px;
+      right: 25.5px;
+    }
+
+    .hamburger.active span:nth-child(2) {
+      scale: 0;
+    }
+
+    .hamburger.active span:nth-child(1) {
+      transform: rotate(-135deg);
+    }
+
+    .hamburger.active span:nth-child(3) {
+      width: 50px;
+      transform: translateY(0) rotate(315deg);
+    }
+
+
+    button {
+      margin-top: 5em;
+      font-size: 16px;
+      padding: 10px 25px;
+      text-align: center;
+      border-radius: 30px;
+      border: 0;
+      background: transparent;
+      color: #ddd;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      cursor: pointer;
+      transition: .5s ease-in-out;
+    }
+
+    button:active {
+      scale: 0.96;
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+
+    /*for javascript*/
+
+    .darkbg {
+      background: #f5f5f5;
+    }
+
+    .hamburger .darkbg {
+      background: #fff;
+    }
+
+    .text {
+      border-color: rgba(0, 0, 0, 0.3);
+      color: rgba(0, 0, 0, 0.6);
+    }
+
+    .text:active {
+      background: rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <button id="dark">Dark</button>
+
+
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const dark = document.getElementById('dark');
+    const body = document.body;
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+    })
+
+    dark.addEventListener('click', () => {
+      body.classList.toggle('darkbg');
+      hamburger.classList.toggle('darkbg');
+      dark.classList.toggle('text');
+    })
+  </script>
+</body>
+
+</html>
