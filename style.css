@@ -1109,6 +1109,10 @@
     background: url('./assets/images/projects-images/projects29.jpg') center no-repeat;
     background-size: cover;
   }
+  .projects .source:nth-child(30) .box {
+    background: url('./assets/images/projects-images/projects30.jpg') center no-repeat;
+    background-size: cover;
+  }
 
 }
 
