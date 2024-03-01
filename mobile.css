@@ -1120,6 +1120,10 @@ footer img {
   background: url('./assets/images/projects-images/projects31.jpg') center no-repeat;
   background-size: cover;
 }
+.projects .source:nth-child(32) .box {
+  background: url('./assets/images/projects-images/projects32.jpg') center no-repeat;
+  background-size: cover;
+}
 
 
 
