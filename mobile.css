@@ -1140,11 +1140,13 @@ footer img {
 
 
 
-.skeleton {
+.skeleton, .skeleton-circle{
   position: relative;
 }
 
-.skeleton::before {
+.skeleton::before,
+.skeleton-circle::before
+{
   content: '';
   position: absolute;
   top: 0;
@@ -1157,6 +1159,17 @@ footer img {
   background: linear-gradient(90deg, #eee, #f9f9f9, #eee);
   background-size: 200%;
   animation: skeleton 1s infinite reverse;
+}
+
+.skeleton-circle::before{
+  height: 102%;
+  width: 102%;
+  border-radius: 50%;
+  margin-left: -0.5px;
+  margin-top: -0.3px;
+  display: flex;
+  align-self: center;
+  justify-content: center;
 }
 
 @-webkit-keyframes skeleton {
