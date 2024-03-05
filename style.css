@@ -1145,7 +1145,10 @@
     background: url('./assets/images/projects-images/projects34.jpg') center no-repeat;
     background-size: cover;
   }
-
+  .projects .source:nth-child(35) .box {
+    background: url('./assets/images/projects-images/projects35.jpg') center no-repeat;
+    background-size: cover;
+  }
 
 }
 
