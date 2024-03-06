@@ -6,23 +6,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>https://www.Opensource.com/heyCham/projects/</title>
   <link rel="stylesheet" href="style.css" id="styleSheet">
-    <script>
-      function switchStyleSheet() {
-        var styleSheet = document.getElementById("styleSheet");
-        if (window.innerWidth < 600) {
-          styleSheet.href = "mobile.css";
-        } else {
-          styleSheet.href = "style.css";
-        }
+  <link rel="stylesheet" href="pagination.css">
+  <script>
+    function switchStyleSheet() {
+      var styleSheet = document.getElementById("styleSheet");
+      if (window.innerWidth < 600) {
+        styleSheet.href = "mobile.css";
+      } else {
+        styleSheet.href = "style.css";
       }
-      switchStyleSheet();
-    </script>
+    }
+    switchStyleSheet();
+  </script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body>
- <!-- <div class="preloader">
+  <!-- <div class="preloader">
     <div class="lds-ripple"><div></div><div></div></div>    
   </div>
   -->
@@ -42,14 +43,14 @@
         <span><img src="search-line.svg" alt="Search Bar" class="transition hover"></span>
       </div>
       <div class="mood hover transition">
-        <img src="sun-fill.svg" alt="" id="dark" >
+        <img src="sun-fill.svg" alt="" id="dark">
       </div>
     </nav>
   </header>
   <br><br><br>
 
   <section id="projects" style="display: none">
-    <h2 id="heading" >Web Project Source Codes</h2>
+    <h2 id="heading">Web Project Source Codes</h2>
     <p id="text">Welcome! All projects are here. You can preview and download. If you're facing any problem direct dm me on Insta.</p>
     <img src="z4c7jIndmE.gif" alt="" id="img">
     <div class="projects">
@@ -63,7 +64,7 @@
           <a href="Switch Dark to light mood.zip" download class="skeleton"><img src="bx-file.svg" alt="bx-file.svg">Source Code</a>
         </div>
       </div>
-      <div class="source " >
+      <div class="source ">
         <div class="box skeleton"></div>
         <h3 class="title">Project 2</h3>
         <h4 class="description skeleton">Scroll Down</h4>
@@ -100,7 +101,7 @@
         <p class="sub-description skeleton">Responsive for all devices.</p>
         <div class="links">
           <a href="menu-bar" class="skeleton"><i class="fa fa-paperclip"></i> Preview</a>
-          <a href="Menu bar Hamburger Menu Bar.zip" download class="skeleton" ><img src="bx-file.svg" alt="bx-file.svg">Source Code</a>
+          <a href="Menu bar Hamburger Menu Bar.zip" download class="skeleton"><img src="bx-file.svg" alt="bx-file.svg">Source Code</a>
         </div>
       </div>
       <div class="source">
@@ -130,7 +131,7 @@
         <p class="sub-description skeleton">Responsive for all devices.</p>
         <div class="links">
           <a href="auto-text" class="skeleton"><i class="fa fa-paperclip"></i> Preview</a>
-          <a href="Text slides Animation Auto.zip" download  class="skeleton"><img src="bx-file.svg" alt="bx-file.svg">Source Code</a>
+          <a href="Text slides Animation Auto.zip" download class="skeleton"><img src="bx-file.svg" alt="bx-file.svg">Source Code</a>
         </div>
       </div>
       <div class="source">
@@ -202,7 +203,7 @@
           <a href="Magic menu indicator" class="skeleton"><i class="fa fa-paperclip"></i> Preview</a>
           <a href="Magic Menu Indicator .zip" download class="skeleton"><img src="bx-file.svg" alt="bx-file.svg">Source Code</a>
         </div>
-      </div>     
+      </div>
       <div class="source">
         <div class="box skeleton"></div>
         <h3 class="title">Project 16</h3>
@@ -404,15 +405,12 @@
         </div>
       </div>
 
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
     </div>
     <div class="btn " id="load-btn">
       <button id="load-btn">Load More...</button>
@@ -421,18 +419,18 @@
     <div class="styles">
       <div class="style"></div><span>☆</span>
       <div class="style"></div>
-      </div>
+    </div>
   </section>
   <script src="main.js"></script>
   <script>
     const preloader = document.querySelector('.loader-code');
     const header = document.querySelector('header');
     const projects = document.getElementById('projects');
-    window.addEventListener('load',()=>{
+    window.addEventListener('load', () => {
       //preloader.style.display = 'none';
-      setTimeout(() =>{
-        preloader.style.display = 'none';  
-      },1000);
+      setTimeout(() => {
+        preloader.style.display = 'none';
+      }, 1000);
       header.style.display = 'block';
       projects.style.display = 'block';
     })

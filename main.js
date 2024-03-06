@@ -157,7 +157,7 @@ for (let i = currentItems; i < projectItems.length; i++) {
 loadBtn.addEventListener('click', showNextItems);
 
 function showNextItems() {
-  const nextItemsIndex = currentItems + 5;
+  const nextItemsIndex = currentItems + 6;
 
   for (let i = currentItems; i < nextItemsIndex && i < projectItems.length; i++) {
     projectItems[i].style.display = 'inline-block';
