@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Neumorphiam Pagination style</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      height: 100vh;
+      background: #e0e0e0;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      margin: 10px;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+    }
+
+    .pagination {
+      width: 490px;
+      height: 66px;
+      background: #e0e0e0;
+      border-radius: 50px;
+      -webkit-box-shadow: inset 5px 5px 1px #717171,
+        inset -5px -5px 1px #ffffff;
+      box-shadow: inset 5px 5px 1px #717171,
+        inset -5px -5px 1px #ffffff;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      padding: 1em 2em;
+    }
+
+    ul {
+      margin: 0 auto;
+      text-align: center;
+
+    }
+
+    ul li {
+      display: inline-block;
+      list-style-type: none;
+      margin-left: 5px;
+      background: rgba(0, 0, 0, 0.03);
+      border-radius: 50%;
+      height: 35px;
+      width: 35px;
+      line-height: 35px;
+      -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+      font-weight: 400;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      background-position: 0 -45px;
+      -webkit-transition: all .5s ease-in-out;
+      -o-transition: all .5s ease-in-out;
+      transition: all .5s ease-in-out;
+
+    }
+
+    ul li:hover,
+    button:hover {
+      -webkit-transform: scale(0.96);
+      -ms-transform: scale(0.96);
+      transform: scale(0.96);
+    }
+
+    button {
+      line-height: 35px;
+      width: 75px;
+      border: 0;
+      background-color: hsla(220, 15%, 58%, .1);
+      background-image: hsla(220, 15%, 58%, .1);
+      border-radius: 50px;
+      font-weight: 600;
+      background-position: 0 -45px;
+      -webkit-transition: all .5s ease-in-out;
+      -o-transition: all .5s ease-in-out;
+      transition: all .5s ease-in-out;
+    }
+
+    ul .active {
+      background-image: -webkit-gradient(linear, left top, right top, from(#0895FF), to(#37D5FF));
+      background-image: -o-linear-gradient(left, #0895FF, #37D5FF);
+      background-image: linear-gradient(90deg, #0895FF, #37D5FF);
+      background-repeat: no-repeat;
+      color: #fff;
+      background-position: 0 0;
+      font-weight: 600;
+    }
+
+    button.active {
+      background-color: rgba(0, 0, 0, 0.07);
+
+    }
+
+    #previous.active {}
+
+    @media screen and (max-width: 667px) {
+      .pagination {
+        padding: 1em 1.2em;
+      }
+
+      button {
+        width: 60px;
+      }
+
+      ul li:last-child {
+        display: none;
+
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="pagination">
+    <button id="previous">Prev.</button>
+    <ul>
+      <li class="active">1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+    </ul>
+    <button id="next">Next</button>
+  </div>
+
+
+  <script>
+    const btns = document.querySelectorAll('ul li');
+    const previous = document.getElementById('previous');
+    const next = document.getElementById('next');
+
+    let currentIndex = 0;
+
+    updateButtonState();
+
+    for (let i = 0; i < btns.length; i++) {
+      btns[i].addEventListener('click', function() {
+        currentIndex = i;
+        updateActiveClass();
+        updateButtonState();
+      });
+    }
+
+    previous.addEventListener('click', function() {
+      currentIndex = (currentIndex - 1 + btns.length) % btns.length;
+      updateActiveClass();
+      updateButtonState();
+    });
+
+    next.addEventListener('click', function() {
+      currentIndex = (currentIndex + 1) % btns.length;
+      updateActiveClass();
+      updateButtonState();
+    });
+
+    function updateActiveClass() {
+      let current = document.querySelector('.active');
+      if (current) {
+        current.classList.remove('active');
+      }
+      btns[currentIndex].classList.add('active');
+    }
+
+    function updateButtonState() {
+      previous.disabled = currentIndex === 0;
+      next.disabled = currentIndex === btns.length - 1;
+    }
+
+
+    const buttons = document.querySelectorAll('button');
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        btn.classList.add('active');
+        setTimeout(() => {
+          btn.classList.remove('active');
+        }, 600)
+      })
+    })
+  </script>
+</body>
+
+</html>

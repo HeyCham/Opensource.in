@@ -1149,6 +1149,27 @@
     background: url('./assets/images/projects-images/projects35.jpg') center no-repeat;
     background-size: cover;
   }
+  .projects .source:nth-child(36) .box {
+    background: url('./assets/images/projects-images/projects36.jpg') center no-repeat;
+    background-size: cover;
+  }
+  .projects .source:nth-child(37) .box {
+    background: url('./assets/images/projects-images/projects37.jpg') center no-repeat;
+    background-size: cover;
+  }
+  .projects .source:nth-child(38) .box {
+    background: url('./assets/images/projects-images/projects38.jpg') center no-repeat;
+    background-size: cover;
+  }
+  .projects .source:nth-child(39) .box {
+    background: url('./assets/images/projects-images/projects39.jpg') center no-repeat;
+    background-size: cover;
+  }
+  .projects .source:nth-child(40) .box {
+    background: url('./assets/images/projects-images/projects40.jpg') center no-repeat;
+    background-size: cover;
+  }
+
 
 }
 
