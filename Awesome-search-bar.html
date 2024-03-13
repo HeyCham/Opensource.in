@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Awesome Search Bar</title>
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css'>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      height: 100%;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: #262433;
+      color: #fff;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+    }
+
+    .search {
+      display: inline-flex;
+      align-items: center;
+      color: #fff;
+      padding: 10px 15px;
+      border-radius: 50px;
+      border: 1px solid #fff;
+      transition: 1s linear;
+    }
+
+    .search:hover {
+      border-color: #24D2FB;
+    }
+
+    .search :is(input, button) {
+      background: transparent;
+      color: inherit;
+      border: none;
+      outline: none;
+    }
+
+    .search__input {
+      width: 0;
+      transition: width 0.5s;
+    }
+
+    .search__button {
+      display: grid;
+      place-items: center;
+      width: 35px;
+      height: 35px;
+      cursor: pointer;
+      transition: color 0.25s;
+    }
+
+    .search__button:hover {
+      color: #e3e3e3;
+      background: rgba(0, 0, 0, 0.1);
+      border-radius: 50px;
+    }
+
+    .search:focus-within input {
+      width: 200px;
+      padding-left: 10px;
+
+    }
+
+    ::placeholder {
+      font: inherit;
+      color: #e3e3e3;
+    }
+
+    i {
+      font-size: 1.22em;
+    }
+  </style>
+
+</head>
+
+<body>
+  <form class="search">
+    <input type="text" placeholder="Search" class="search__input" />
+    <button type="button" class="search__button">
+      <i class="ri-search-2-line"></i>
+    </button>
+  </form>
+
+</body>
+
+</html>
